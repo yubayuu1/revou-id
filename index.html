@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/logoRevou.png" />
+        <title>Revou</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="headerWrapper">
+            <img src="assets/logoRevou.png" alt="logoRevou" class="logoRevou" />
+            <div class="navBar">
+                <button class="navItem">
+                    <a
+                        href="index.html"
+                        style="text-decoration: none; color: black"
+                        >Home</a
+                    >
+                </button>
+                <button class="navItem">
+                    <a
+                        href="profile.html"
+                        style="text-decoration: none; color: black"
+                        >Our Profile</a
+                    >
+                </button>
+                <button class="navItem">
+                    <a
+                        href="#headquartersSection"
+                        style="text-decoration: none; color: black"
+                        >Headquarters</a
+                    >
+                </button>
+                <button class="navItem">
+                    <a
+                        href="#messageUsSection"
+                        style="text-decoration: none; color: black"
+                        >Message Us</a
+                    >
+                </button>
+            </div>
+        </header>
+
+        <!-- Start Hero Section -->
+        <div id="heroSection" class="hero">
+            <h1>Hi <span id="nama"></span>, Welcome to Website Revou</h1>
+            <script>
+                // Window Prompt Start
+                var nama = prompt("Masukkan nama Kamu");
+                document.getElementById("nama").innerText = nama;
+                // console.log(element);
+                // End
+            </script>
+        </div>
+        <!-- End  -->
+
+        <!-- Start Headquarters Section-->
+        <div id="headquartersSection">
+            <h1>Headquarters</h1>
+            <div class="wrapperHeadquarters">
+                <div class="headquartersImageContainer">
+                    <div class="headquartersImage1"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="headquartersImageContainer">
+                    <div class="headquartersImage2"></div>
+                    <p>Bandung</p>
+                </div>
+                <div class="headquartersImageContainer">
+                    <div class="headquartersImage3"></div>
+                    <p>Surabaya</p>
+                </div>
+                <div class="headquartersImageContainer">
+                    <div class="headquartersImage4"></div>
+                    <p>Sidaorjo</p>
+                </div>
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Start Message Section -->
+        <div id="messageUsSection" class="messageUsSection">
+            <div class="wrapperMessage">
+                <h1>Message Us</h1>
+                <form
+                    action=""
+                    class="formMessageClass"
+                    name="formMessage"
+                    onsubmit="return validateForm()"
+                    style="margin-bottom: 2rem"
+                >
+                    <table class="tableMessage">
+                        <tr class="namaMessageClass" style="padding: 2rem">
+                            <td style="margin-bottom: 2rem">Nama</td>
+                            <td>:</td>
+                            <td><input type="text" name="fullNama" /></td>
+                        </tr>
+                        <tr class="tlMessageClass" style="margin-top: 2rem">
+                            <td style="margin-top: 2orem">Tanggal Lahir</td>
+                            <td>:</td>
+                            <td><input type="date" name="tanggalLahir" /></td>
+                        </tr>
+                        <tr class="jlMessageClass" style="margin-top: 2rem">
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input
+                                    type="radio"
+                                    name="jenisKelamin"
+                                    value="Laki-laki"
+                                />
+                                Laki-laki
+                                <input
+                                    type="radio"
+                                    name="jenisKelamin"
+                                    value="Perempuan"
+                                />
+                                Perempuan
+                            </td>
+                        </tr>
+                        <tr class="pesanMessageClass" style="margin-top: 2rem">
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td>
+                                <textarea
+                                    name="pesanMessage"
+                                    id="pesanMessage"
+                                    cols="30"
+                                    rows="10"
+                                    style="margin-top: -4rem"
+                                ></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btnSubmit">Submit</button>
+                </form>
+                <!-- script Start - End -->
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Start Message Section2 -->
+        <div id="messageUsSection2" class="messageUsSection2">
+            <div class="wrapperMessage2" style="margin-top: 2rem">
+                <form
+                    action=""
+                    class="formMessageClass2"
+                    name="formMessage"
+                    style="padding-bottom: 2rem"
+                >
+                    <table class="tableMessage">
+                        <tr class="namaMessageClass2" style="padding: 2rem">
+                            <td style="margin-bottom: 2rem">Nama</td>
+                            <td>:</td>
+                            <td id="senderFullName"></td>
+                        </tr>
+                        <tr class="tlMessageClass2" style="margin-top: 2rem">
+                            <td style="margin-top: 2orem">Tanggal Lahir</td>
+                            <td>:</td>
+                            <td id="senderTanggalLahir"></td>
+                        </tr>
+                        <tr class="jlMessageClass2" style="margin-top: 2rem">
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td id="senderJenisKelamin"></td>
+                        </tr>
+                        <tr class="pesanMessageClass">
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td id="senderMessage"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Start Footer Section -->
+        <footer class="footerSection">
+            <h2>Created by Revou</h2>
+        </footer>
+        <!-- End -->
+    </body>
+    <script src="js/script.js"></script>
+</html>
